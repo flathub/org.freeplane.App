@@ -1,6 +1,6 @@
 app-id: org.freeplane.App
 runtime: org.freedesktop.Platform
-runtime-version: '19.08'
+runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk11
@@ -34,12 +34,12 @@ modules:
       # fetch source code for getting some resources
       - type: git
         url: https://github.com/freeplane/freeplane.git
-        tag: release-1.8.6
+        tag: release-1.8.8
 
       # fetch binary for packing without compiling
       - type: archive
-        url: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-1.8.6.zip
-        sha256: b5be17961cf60be55a56f5a185524c8e8f81c2a4bf8597fadc8d5fb903216043
+        url: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-1.8.8.zip
+        sha256: f6c90a7fd73c727b90a615f018cf53e33b0f532caded939b0cc3ac2fcb445c19
         strip-components: 0
       
       # Install AppData.
@@ -53,7 +53,7 @@ modules:
     buildsystem: simple
     build-commands: 
       - mkdir -p /app/Freeplane /app/bin
-      - cp -ra freeplane-1.8.6/* /app/Freeplane
+      - cp -ra freeplane-1.8.8/* /app/Freeplane
       
       # Freeplane launcher expects to be in the same directory than main application
       - install -Dm755 freeplane_framework/script/freeplane.sh /app/Freeplane/freeplane.sh
