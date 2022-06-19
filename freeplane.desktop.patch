@@ -2,7 +2,7 @@ diff --git a/debian-meta-data/freeplane.desktop b/debian-meta-data/freeplane.des
 index c4bb83e8f..ed13e7761 100644
 --- a/debian-meta-data/freeplane.desktop
 +++ b/debian-meta-data/freeplane.desktop
-@@ -1,13 +1,21 @@
+@@ -1,13 +1,18 @@
  [Desktop Entry]
  Version=1.0
  Name=Freeplane
@@ -26,6 +26,3 @@ index c4bb83e8f..ed13e7761 100644
 +Keywords[es]=mapa;esquema;borrador;plan;proyecto;tormenta de ideas;
 +
  StartupWMClass=org-knopflerfish-framework-BundleThread
-+
-+X-Flatpak=org.freeplane.App
-+X-Desktop-File-Install-Version=0.24
