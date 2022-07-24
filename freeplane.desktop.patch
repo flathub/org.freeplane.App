@@ -1,15 +1,16 @@
---- debian-meta-data/freeplane.desktop	2020-04-11 00:25:26.589811738 +0200
-+++ debian-meta-data/org.freeplane.App.desktop	2020-04-11 00:38:13.035282118 +0200
-@@ -1,12 +1,23 @@
+diff --git a/debian-meta-data/freeplane.desktop b/debian-meta-data/freeplane.desktop
+index c4bb83e8f..ed13e7761 100644
+--- a/debian-meta-data/freeplane.desktop
++++ b/debian-meta-data/freeplane.desktop
+@@ -1,13 +1,18 @@
  [Desktop Entry]
--Version=1.0
+ Version=1.0
  Name=Freeplane
 -Exec=/usr/bin/freeplane %F
 +Exec=freeplane %F
  Terminal=false
 -Icon=freeplane
 +Icon=org.freeplane.App
-+StartupNotify=true
  Type=Application
  MimeType=application/x-freeplane;
  Categories=Office;
@@ -24,9 +25,4 @@
 +Keywords=map;outline;draft;plan;project;brainstorming;
 +Keywords[es]=mapa;esquema;borrador;plan;proyecto;tormenta de ideas;
 +
-+# This thing is to tell GnomeShell the name of the X window of the
-+# application for being able to set the correct icon, etc.
-+StartupWMClass="org-knopflerfish-framework-BundleThread", "org-knopflerfish-framework-BundleThread"
-+
-+X-Flatpak=org.freeplane.App
-+X-Desktop-File-Install-Version=0.24
+ StartupWMClass=org-knopflerfish-framework-BundleThread

@@ -1,0 +1,22 @@
+diff --git a/debian-meta-data/freeplane.sharedmimeinfo b/debian-meta-data/freeplane.sharedmimeinfo
+index 3b2d6c846..210eceef3 100644
+--- a/debian-meta-data/freeplane.sharedmimeinfo
++++ b/debian-meta-data/freeplane.sharedmimeinfo
+@@ -25,7 +25,7 @@
+ 	<comment xml:lang="zh_CN">FreeMind 思维导图</comment>
+ 	<comment xml:lang="zh">FreeMind 心智圖</comment>
+ 	<!--<icon name="/usr/share/icons/hicolor/scalable/apps/freeplane.svg" />-->
+-  <icon name="freeplane"/>
++  <icon name="org.freeplane.App"/>
+ 	<glob pattern="*.mm" />
+ 	<!-- freemind.xml uses prority 65, and we don't want to override it! -->
+ 	<magic priority="60">
+@@ -56,7 +56,7 @@
+ 	<comment xml:lang="zh_CN">Freeplane 思维导图</comment>
+ 	<comment xml:lang="zh">Freeplane 心智圖</comment>
+   <!--	<icon name="/usr/share/icons/hicolor/scalable/apps/freeplane.svg" /> -->
+-  <icon name="freeplane"/>
++  <icon name="org.freeplane.App"/>
+ 	<glob pattern="*.mm" />
+ 	<magic priority="66">
+ 		<match type="string" value="&lt;map version=&quot;freeplane" offset="0" />
