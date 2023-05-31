@@ -36,12 +36,21 @@ modules:
         url: https://github.com/freeplane/freeplane.git
         tag: release-1.10.3
         commit: 6748f6ffd8bebb1b69c1ec4d911e9bc4a0954432
+        x-checker-data:
+          type: anitya
+          project-id: 17874
+          tag-template: release-$version
 
       # fetch binary for packing without compiling
       - type: archive
         url: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-1.10.3.zip
         sha256: d40b276493f6c72ccf74c2dbb6cf7aa016a08ba5fa1fb2dea10c44a0ecd26da5
         dest: freeplane_bin
+        x-checker-data:
+          type: anitya
+          project-id: 17874
+          url-template: 
+            https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-$version.zip
 
       - type: patch
         path: freeplane.desktop.patch
