@@ -47,11 +47,16 @@ modules:
         path: freeplane.desktop.patch
       - type: patch
         path: freeplane.sharedmimeinfo.patch
-      - type: patch
-        path: org.freeplane.App.metainfo.xml.patch
 
     buildsystem: simple
     build-commands:
+      # Add current release and date to metainfo
+      - |
+        set -eo pipefail
+        version=$(git describe --tags --exact-match | sed 's/^release-//')
+        date=$(git log -1 --date=short --format=%cd)
+        sed -i 's/<releases>/\0\n<release version="'"${version}"'" date="'"${date}"'" \/>/' debian-meta-data/org.freeplane.App.metainfo.xml
+
       - mkdir -p /app/Freeplane /app/bin
       - cp -ra freeplane_bin/* /app/Freeplane
 
