@@ -34,8 +34,8 @@ modules:
       # fetch source code for getting some resources
       - type: git
         url: https://github.com/freeplane/freeplane.git
-        tag: release-1.11.6
-        commit: f7f4bfc921430d8cc1b8f6d824405b7e80bdc437
+        tag: release-1.11.10
+        commit: 4f3abb16eb364b5e520b02ec6cb8dde52417e666
         x-checker-data:
           type: anitya
           project-id: 17874
