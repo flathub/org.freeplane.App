@@ -43,8 +43,8 @@ modules:
 
       # fetch binary for packing without compiling
       - type: archive
-        url: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-1.11.6.zip
-        sha256: 5faed091c5fdcfa8747de255a81faf50a76639a89ae7c35cd692973d753a38f7
+        url: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-1.11.11.zip
+        sha256: a458f5d2fd534e3ad9024c892d37a57790fc3a6743c336ea1cfab3090cdd33ee
         dest: freeplane_bin
         x-checker-data:
           type: anitya
