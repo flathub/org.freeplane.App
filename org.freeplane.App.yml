@@ -68,6 +68,9 @@ modules:
         sed -i 's,<image>https://raw.githubusercontent.com/olea/flathub/org.freeplane.App/screenshots/screenshot-1.png</image>,&<caption>Freeplane tutorial</caption>,' debian-meta-data/org.freeplane.App.metainfo.xml
         sed -i 's,<image>https://raw.githubusercontent.com/olea/flathub/org.freeplane.App/screenshots/screenshot-3.png</image>,&<caption>Freeplane example of node grouping</caption>,' debian-meta-data/org.freeplane.App.metainfo.xml
         sed -i 's,<image>https://raw.githubusercontent.com/olea/flathub/org.freeplane.App/screenshots/screenshot-4.png</image>,&<caption>Freeplane example with mathematical formulas</caption>,' debian-meta-data/org.freeplane.App.metainfo.xml
+        sed -i 's,<image>https://raw.githubusercontent.com/olea/flathub/org.freeplane.App/screenshots/screenshot-4.png</image>,&<caption>Freeplane example with mathematical formulas</caption>,' debian-meta-data/org.freeplane.App.metainfo.xml
+        sed -i 's,<mimetypes>,<provides>,' debian-meta-data/org.freeplane.App.metainfo.xml
+        sed -i 's,</mimetypes>,</provides>,' debian-meta-data/org.freeplane.App.metainfo.xml
 
       - mkdir -p /app/Freeplane /app/bin
       - cp -ra freeplane_bin/* /app/Freeplane
