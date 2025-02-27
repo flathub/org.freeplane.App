@@ -22,6 +22,7 @@ finish-args:
 build-options:
   env:
     JAVA_HOME: /usr/lib/sdk/openjdk17/
+
 modules:
   - name: openjdk
     buildsystem: simple
@@ -43,13 +44,13 @@ modules:
 
       # fetch binary for packing without compiling
       - type: archive
-        url: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-1.11.6.zip
+        url: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/archive/1.11.6/freeplane_bin-1.11.6.zip
         sha256: 5faed091c5fdcfa8747de255a81faf50a76639a89ae7c35cd692973d753a38f7
         dest: freeplane_bin
         x-checker-data:
           type: anitya
           project-id: 17874
-          url-template: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-$version.zip
+          url-template: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/archive/$version/freeplane_bin-$version.zip
 
       - type: patch
         path: freeplane.desktop.patch
