@@ -1,9 +1,9 @@
 app-id: org.freeplane.App
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.openjdk17
+  - org.freedesktop.Sdk.Extension.openjdk21
 command: freeplane
 
 finish-args:
@@ -21,12 +21,13 @@ finish-args:
 
 build-options:
   env:
-    JAVA_HOME: /usr/lib/sdk/openjdk17/
+    JAVA_HOME: /usr/lib/sdk/openjdk21/
+
 modules:
   - name: openjdk
     buildsystem: simple
     build-commands:
-      - /usr/lib/sdk/openjdk17/install.sh
+      - /usr/lib/sdk/openjdk21/install.sh
 
   - name: freeplane
     no-autogen: true
@@ -34,8 +35,8 @@ modules:
       # fetch source code for getting some resources
       - type: git
         url: https://github.com/freeplane/freeplane.git
-        tag: release-1.11.6
-        commit: f7f4bfc921430d8cc1b8f6d824405b7e80bdc437
+        tag: release-1.12.9
+        commit: 2cfee7e002a12b69ba85edfd203047a2751effbb
         x-checker-data:
           type: anitya
           project-id: 17874
@@ -43,13 +44,13 @@ modules:
 
       # fetch binary for packing without compiling
       - type: archive
-        url: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-1.11.6.zip
-        sha256: 5faed091c5fdcfa8747de255a81faf50a76639a89ae7c35cd692973d753a38f7
+        url: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/archive/1.12.9/freeplane_bin-1.12.9.zip
+        sha256: 89855ca67dcfda064afa81fc4d0bb86ab0ad9339a806a0a5676bd38c9a2b1c89
         dest: freeplane_bin
         x-checker-data:
           type: anitya
           project-id: 17874
-          url-template: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-$version.zip
+          url-template: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/archive/$version/freeplane_bin-$version.zip
 
       - type: patch
         path: freeplane.desktop.patch
