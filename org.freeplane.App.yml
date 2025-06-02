@@ -54,8 +54,12 @@ modules:
 
       - type: patch
         path: freeplane.desktop.patch
+
       - type: patch
         path: freeplane.sharedmimeinfo.patch
+
+      - type: file
+        path: org.freeplane.App.metainfo.xml
 
     buildsystem: simple
     build-commands:
@@ -73,9 +77,14 @@ modules:
       - install -Dm755 freeplane_framework/script/freeplane.sh /app/Freeplane/freeplane.sh
       - ln -s /app/Freeplane/freeplane.sh /app/bin/freeplane
 
+      # Don't use the org.freeplane.App.metainfo.xml from the original Freeplane
+      # repository, because the screenshots are outdated (see https://github.com/flathub/org.freeplane.App/issues/42).
+      #
+      #- install -Dm644 debian-meta-data/org.freeplane.App.metainfo.xml /app/share/metainfo/org.freeplane.App.metainfo.xml
+      - install -Dm644 org.freeplane.App.metainfo.xml /app/share/metainfo/org.freeplane.App.metainfo.xml
+
       - install -Dm644 debian-meta-data/freeplane.desktop /app/share/applications/org.freeplane.App.desktop
       - install -Dm644 debian-meta-data/freeplane.sharedmimeinfo /app/share/mime/packages/org.freeplane.App.mime.xml
-      - install -Dm644 debian-meta-data/org.freeplane.App.metainfo.xml /app/share/metainfo/org.freeplane.App.metainfo.xml
       - install -Dm644 freeplane_framework/script/freeplane.svg /app/share/icons/hicolor/scalable/apps/org.freeplane.App.svg
 
     post-install:
