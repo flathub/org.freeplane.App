@@ -59,8 +59,11 @@
   <content_rating type="oars-1.1"/>
 
   <releases>
-    <release version="1.12.12" date="2025-08-01">
+    <release version="1.12.14" date="2025-09-19">
       <description></description>
+    </release>
+    <release version="1.12.12" date="2025-08-01">
+      <description/>
     </release>
     <release version="1.12.11" date="2025-06-01">
       <description/>
