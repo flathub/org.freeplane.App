@@ -35,8 +35,8 @@ modules:
       # fetch source code for getting some resources
       - type: git
         url: https://github.com/freeplane/freeplane.git
-        tag: release-1.12.16
-        commit: 271e30985f1b928822988b9072cc8b3cf505399e
+        tag: release-1.12.17
+        commit: b6ce1731e2e8536dfcefd36c5162bb176b834cbf
         x-checker-data:
           type: anitya
           project-id: 17874
@@ -44,8 +44,8 @@ modules:
 
       # fetch binary for packing without compiling
       - type: archive
-        url: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/archive/1.12.16/freeplane_bin-1.12.16.zip
-        sha256: 9f0ea58d3a23a161181c2af2f6c50f7eef45245ff7d45d40c488f8b6190f631a
+        url: https://sourceforge.net/projects/freeplane/files/freeplane%20stable/archive/1.12.17/freeplane_bin-1.12.17.zip
+        sha256: 612e49ee35777f91591a3775654c3aa476369ee6dc7f61f5ba4a84f8b790e2d8
         dest: freeplane_bin
         x-checker-data:
           type: anitya
