@@ -1,10 +1,13 @@
 app-id: org.freeplane.App
+command: freeplane
+
+# * https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/wikis/Releases#information-about-current-releases
+# * https://docs.flatpak.org/en/latest/available-runtimes.html#freedesktop
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk21
-command: freeplane
 
 finish-args:
   - --share=ipc
