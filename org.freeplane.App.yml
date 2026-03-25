@@ -1,10 +1,15 @@
 app-id: org.freeplane.App
+command: freeplane
+
+# * https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/wikis/Releases#information-about-current-releases
+# * https://docs.flatpak.org/en/latest/available-runtimes.html#freedesktop
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
+  # Freeplane 1.13 requires java version 8 or from 11 to 23
+  # https://github.com/flathub/org.freedesktop.Sdk.Extension.openjdk21
   - org.freedesktop.Sdk.Extension.openjdk21
-command: freeplane
 
 finish-args:
   - --share=ipc
@@ -15,7 +20,7 @@ finish-args:
   - --device=dri
   - --filesystem=home
 
-  - --env=PATH=/usr/bin:/app/bin:/app/jre/bin
+  - --env=PATH=/app/jre/bin:/app/bin:/usr/bin
   - --env=JAVA_HOME=/app/jre
   - --env=JAVA=/app/jre/bin/java
 
